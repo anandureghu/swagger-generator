@@ -1,0 +1,22 @@
+@media screen and (max-width: 992px) {
+  .wrap-required {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .add-header-buttons {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .add-header-buttons {
+    flex-direction: column;
+  }
+
+  .add-header-buttons button{
+    width: 100%;
+    margin-top: 30px;
+  }
+}
