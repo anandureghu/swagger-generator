@@ -28,23 +28,29 @@ const AddServerDetails = () => {
               type="text"
               placeholder={`Server url ${index + 1}`}
             />
-            <span
-              className="cursor-pointer h-9 rounded-md text-red-500 border-red-500 border px-3 py-1"
-              onClick={() => handleServerDelete(server.id)}
-            >
-              delete
-            </span>
+            {servers.length > 1 && (
+              <span
+                className="cursor-pointer h-9 rounded-md text-red-500 border-red-500 border px-3 py-1"
+                onClick={() => handleServerDelete(server.id)}
+              >
+                delete
+              </span>
+            )}
           </div>
         );
       })}
 
       <div className="flex justify-between">
-      <Link to='/add/header'
-          className="bg-gray-500 px-10 py-2 text-slate-50 rounded">
+        <Link
+          to="/add/header"
+          className="bg-gray-500 px-10 py-2 text-slate-50 rounded"
+        >
           Back
         </Link>
-        <Link to='/add/api'
-          className="bg-green-500 px-10 py-2 text-slate-50 rounded">
+        <Link
+          to="/add/api"
+          className="bg-green-500 px-10 py-2 text-slate-50 rounded"
+        >
           Next
         </Link>
       </div>
